@@ -37,13 +37,23 @@ def translate_text(text, source_language, target_language):
 st.title("Language Translator")
 
 text = st.text_area("Enter Text")
-source_lang = st.text_input("Source Language")
-target_lang = st.text_input("Target Language")
+# Language Selection Dropdowns
+source_lang = st.selectbox(
+    "🌐 Select Source Language",
+    ["English", "Spanish", "French", "German", "Chinese", "Hindi"]
+)
 
-if st.button("Translate"):
+target_lang = st.selectbox(
+    "🌍 Select Target Language",
+    ["English", "Spanish", "French", "German", "Chinese", "Hindi"]
+)
+
+# Translate Button
+if st.button("🔁 Translate"):
     if text and source_lang and target_lang:
-        result = translate_text(text, source_lang, target_lang)
-        st.success(result)
+        translated_text = translate_text(text, source_lang, target_lang)
+        st.subheader("✅ Translated Text:")
+        st.write(translated_text)
     else:
-        st.warning("Please fill all fields")
+        st.warning("⚠️ Please fill in all fields.")
 
