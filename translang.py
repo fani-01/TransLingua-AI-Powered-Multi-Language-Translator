@@ -44,7 +44,7 @@ st.markdown("<h1 style='text-align: center;'>🌍 AI-Powered Language Translator
 
 # ---------------- LOAD API KEY ----------------
 load_dotenv()
-api_key = os.getenv("AIzaSyBcqyRGGui_5PEOsoYHSW2BiipccOiqSEM")
+api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key:
     st.error("API Key not found. Please check your .env file.")
