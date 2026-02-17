@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import streamlit as st
 import os
-import google.generativeai as genai
+from google import genai
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -10,7 +10,7 @@ st.set_page_config(
     layout="centered"
 )
 
-# ---------------- CUSTOM CSS (Dark Theme Styling) ----------------
+# ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
 body {
@@ -50,17 +50,18 @@ if not api_key:
     st.error("API Key not found. Please check your .env file.")
     st.stop()
 
-genai.configure(api_key=api_key)
-
-# ---------------- MODEL ----------------
-
-model = genai.GenerativeModel("gemini-pro")
-
+# Create client (NEW SDK style)
+client = genai.Client(api_key=api_key)
 
 # ---------------- FUNCTION ----------------
 def translate_text(text, source_language, target_language):
     prompt = f"Translate the following text from {source_language} to {target_language}: {text}"
-    response = model.generate_content(prompt)
+
+    response = client.models.generate_content(
+        model="gemini-1.5-flash",
+        contents=prompt,
+    )
+
     return response.text
 
 # ---------------- UI ----------------
@@ -80,5 +81,3 @@ if st.button("🔁 Translate"):
         st.success(translated_text)
     else:
         st.warning("⚠️ Please enter text to translate.")
-
-       
