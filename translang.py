@@ -3,6 +3,14 @@ import streamlit as st
 import os
 import google.generativeai as genai
 
+st.set_page_config(
+    page_title="AI-Powered Language Translator",
+    page_icon="🌍",
+    layout="centered"
+)
+
+st.header("🌍 AI-Powered Language Translator")
+
 # Load environment variables
 load_dotenv()
 
