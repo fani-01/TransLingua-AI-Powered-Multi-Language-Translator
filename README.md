@@ -37,13 +37,11 @@ TransLingua/
 
 ├── requirements.txt
 
-├── .gitignore
-
 ├── README.md
 
 How to Run the Project
 1️. Clone the repository
-git clone https://github.com/Sriasha123/Trans-Lingua.git
+git clone https://github.com/fani-01/TransLingua-AI-Powered-Multi-Language-Translator
 Create virtual environment (one time)
 python -m venv venv
 Activate virtual environment
@@ -59,7 +57,7 @@ streamlit run translang.py
 OR (safer version, always works):
 
 python -m streamlit run translang.py
-Demo Video Demo Video Link: https://drive.google.com/file/d/1B9iWLC_6BGqozw8fzpqaY7_gEhko-j9Z/view?usp=drive_link
+Demo Video Demo Video Link: https://github.com/fani-01/TransLingua-AI-Powered-Multi-Language-Translator/raw/refs/heads/main/project-video.mp4
 
 Application execution
 
