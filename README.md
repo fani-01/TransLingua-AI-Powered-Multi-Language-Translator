@@ -1,22 +1,28 @@
 # TransLingua-AI-Powered-Multi-Language-Translator
+
 TransLingua is a web-based AI-powered language translation application built using Streamlit and Google Gemini Generative AI.
 It allows users to translate text between multiple languages through a simple and interactive interface.
 
 This project demonstrates the practical use of Generative AI, cloud-based APIs, and secure software development practices.
 
 Project Objectives
+
 To build an AI-powered language translation system
 To integrate Google Gemini Generative AI with a web application
 To provide a clean and user-friendly interface using Streamlit
 To demonstrate secure API key handling using environment variables
 To follow professional GitHub and version control practices
+
 Features
+
 Translate text between multiple languages
 Simple and interactive Streamlit UI
 Fast and accurate AI-generated translations
 Secure handling of API keys using .env file
 Easy to extend with additional languages
+
 Supported Languages
+
 English
 Spanish
 French
@@ -25,6 +31,7 @@ Chinese
 (Note: More languages can be added easily if required.)
 
 Technologies Used
+
 Python
 Streamlit
 Google Gemini Generative AI
@@ -40,23 +47,35 @@ TransLingua/
 ├── README.md
 
 How to Run the Project
+
 1️. Clone the repository
+
 git clone https://github.com/fani-01/TransLingua-AI-Powered-Multi-Language-Translator
-Create virtual environment (one time)
+
+2.Create virtual environment (one time)
+
 python -m venv venv
-Activate virtual environment
+
+3.Activate virtual environment
+
 venv\Scripts\activate
+
 You’ll see (venv) in terminal — that means it worked
 
-Install dependencies (VERY IMPORTANT)
+4.Install dependencies (VERY IMPORTANT)
+
 pip install -r requirements.txt
+
 (Do this once after activating venv)
 
-Run the Streamlit app
+5.Run the Streamlit app
+
 streamlit run translang.py
+
 OR (safer version, always works):
 
 python -m streamlit run translang.py
+
 Demo Video Demo Video Link: https://github.com/fani-01/TransLingua-AI-Powered-Multi-Language-Translator/raw/refs/heads/main/project-video.mp4
 
 Application execution
